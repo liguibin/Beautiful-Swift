@@ -78,12 +78,3 @@ extension TableAPIViewController {
         return tableViewCell
     }
 }
-
-extension TableAPIViewController {
-    override func getBaseModel() -> BaseModel? {
-        let baseModel = BaseModel()
-        baseModel.url = "https://api.qirenqiji.com/home/v2"
-        baseModel.method = HTTPMethod.get
-        return baseModel
-    }
-}

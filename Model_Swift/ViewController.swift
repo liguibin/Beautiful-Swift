@@ -20,6 +20,9 @@ class ViewController: TableAPIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
+    override func getRequestModel() -> RequestModel? {
+        let requestModel = RequestModel(urlPath: "home/v2")
+        return requestModel
+    }
 }
 

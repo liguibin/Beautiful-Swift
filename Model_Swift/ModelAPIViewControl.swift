@@ -23,27 +23,15 @@ class ModelAPIViewControl: UIViewController {
     public func reload() {
         sendData()
     }
-}
-
-extension ModelAPIViewControl {
     
-    public func getBaseModel() -> BaseModel? {
-        return nil
+    public func getRequestModel() -> RequestModel? {
+        return RequestModel(urlPath: "")
     }
     
     func sendData() {
-        let params = getBaseModel()
-        
-        let request = Request()
-        
-        request.send(params: params!, success: { response in
+        let requestModel : RequestModel = getRequestModel()!
+        AlamofireClient.default.send(requestModel) { (response, error) in
             
-            print(response)
-//            response["d"]["lesson"]
-            
-        }, failture: { error in
-            
-            print(error)
-        })
+        }
     }
 }
