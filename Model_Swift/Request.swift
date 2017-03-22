@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 class Request {
     
@@ -35,7 +34,7 @@ class Request {
         return formatter
     }()
     
-    func send (params : BaseModel,  success:@escaping(_ response:[String:Any]) ->(), failture:@escaping(_ error:Error) ->()) {
+    func send (params : BaseModel, success:@escaping(_ response:[String:Any]) ->(), failture:@escaping(_ error:Error) ->()) {
         self.request = Alamofire.request(params.url!, method: params.method)
 
         guard let request = request else {
@@ -61,19 +60,19 @@ class Request {
                 }
             }
             
-            func jsonToData(value : JSON) {
-                if value.type == SwiftyJSON.Type.dictionary {
-                    if value["c"] == 0 {
-                        success(value.object as! [String : Any])
-                    }
-                }
-            }
+//            func jsonToData(value : JSON) {
+//                if value.type == SwiftyJSON.Type.dictionary {
+//                    if value["c"] == 0 {
+//                        success(value.object as! [String : Any])
+//                    }
+//                }
+//            }
             
             switch result {
                 
             case .success(let value):
-                jsonToData(value: JSON(value))
-                
+//                jsonToData(value: JSON(value))
+                break
             case .failure(let error):
                 failture(error)
             }

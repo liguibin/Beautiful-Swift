@@ -39,7 +39,7 @@ extension ModelAPIViewControl {
         request.send(params: params!, success: { response in
             
             print(response)
-            response["d"]["lesson"]
+//            response["d"]["lesson"]
             
         }, failture: { error in
             

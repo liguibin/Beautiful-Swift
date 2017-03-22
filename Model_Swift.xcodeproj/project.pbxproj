@@ -18,6 +18,9 @@
 		3CF5877C1E6D492F00381F1E /* TableAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5877B1E6D492F00381F1E /* TableAPIViewController.swift */; };
 		3CF5877E1E70FBA300381F1E /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5877D1E70FBA300381F1E /* BaseModel.swift */; };
 		3CF85D5B1E7F823300AF1CCE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF85D5A1E7F823300AF1CCE /* Request.swift */; };
+		3CF85DA21E8130CC00AF1CCE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF85DA11E8130CC00AF1CCE /* Alamofire.framework */; };
+		3CF85DA41E8130CF00AF1CCE /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF85DA31E8130CF00AF1CCE /* ObjectMapper.framework */; };
+		A192061F5077E050D04EFC9E /* Pods_Model_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461DA76B7DE9E30E71C2FAE8 /* Pods_Model_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,11 @@
 		3CF5877B1E6D492F00381F1E /* TableAPIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAPIViewController.swift; sourceTree = "<group>"; };
 		3CF5877D1E70FBA300381F1E /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		3CF85D5A1E7F823300AF1CCE /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		3CF85DA11E8130CC00AF1CCE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		3CF85DA31E8130CF00AF1CCE /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "Pods/../build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
+		461DA76B7DE9E30E71C2FAE8 /* Pods_Model_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Model_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C654F7F27C2A55142D23C76D /* Pods-Model_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Model_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Model_Swift/Pods-Model_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		C9C1D698565BB69F482E4F87 /* Pods-Model_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Model_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Model_Swift/Pods-Model_Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF85DA41E8130CF00AF1CCE /* ObjectMapper.framework in Frameworks */,
+				3CF85DA21E8130CC00AF1CCE /* Alamofire.framework in Frameworks */,
+				A192061F5077E050D04EFC9E /* Pods_Model_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +113,8 @@
 				3CF5875F1E6D488D00381F1E /* Model_SwiftTests */,
 				3CF5876A1E6D488D00381F1E /* Model_SwiftUITests */,
 				3CF587491E6D488D00381F1E /* Products */,
+				4C8BE3CD9E3D86716961854D /* Pods */,
+				92433C5D6440126697F1D4CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +163,25 @@
 			path = Model_SwiftUITests;
 			sourceTree = "<group>";
 		};
+		4C8BE3CD9E3D86716961854D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C654F7F27C2A55142D23C76D /* Pods-Model_Swift.debug.xcconfig */,
+				C9C1D698565BB69F482E4F87 /* Pods-Model_Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92433C5D6440126697F1D4CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CF85DA31E8130CF00AF1CCE /* ObjectMapper.framework */,
+				3CF85DA11E8130CC00AF1CCE /* Alamofire.framework */,
+				461DA76B7DE9E30E71C2FAE8 /* Pods_Model_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,10 +189,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF587701E6D488D00381F1E /* Build configuration list for PBXNativeTarget "Model_Swift" */;
 			buildPhases = (
+				CFDE44B50B89EBBD5F2D4719 /* [CP] Check Pods Manifest.lock */,
 				3CF587441E6D488D00381F1E /* Sources */,
 				3CF587451E6D488D00381F1E /* Frameworks */,
 				3CF587461E6D488D00381F1E /* Resources */,
 				3CF85B0D1E7F7F2C00AF1CCE /* Embed Frameworks */,
+				4ADB388CC8BF3AAB0BEE5761 /* [CP] Embed Pods Frameworks */,
+				0F091F437FC64B9F6CE74D9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,15 +255,18 @@
 					3CF587471E6D488D00381F1E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = MBH6JVND78;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					3CF5875B1E6D488D00381F1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3CF587471E6D488D00381F1E;
 					};
 					3CF587661E6D488D00381F1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3CF587471E6D488D00381F1E;
 					};
@@ -280,6 +318,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F091F437FC64B9F6CE74D9C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Model_Swift/Pods-Model_Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4ADB388CC8BF3AAB0BEE5761 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Model_Swift/Pods-Model_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFDE44B50B89EBBD5F2D4719 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CF587441E6D488D00381F1E /* Sources */ = {
@@ -441,10 +527,16 @@
 		};
 		3CF587711E6D488D00381F1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C654F7F27C2A55142D23C76D /* Pods-Model_Swift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MBH6JVND78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ObjectMapper",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Model_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MyDelegate.Model-Swift";
@@ -455,10 +547,16 @@
 		};
 		3CF587721E6D488D00381F1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C1D698565BB69F482E4F87 /* Pods-Model_Swift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MBH6JVND78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ObjectMapper",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Model_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MyDelegate.Model-Swift";
@@ -470,7 +568,6 @@
 		3CF587741E6D488D00381F1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Model_SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -484,7 +581,6 @@
 		3CF587751E6D488D00381F1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Model_SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -498,7 +594,6 @@
 		3CF587771E6D488D00381F1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Model_SwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MyDelegate.Model-SwiftUITests";
@@ -511,7 +606,6 @@
 		3CF587781E6D488D00381F1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Model_SwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MyDelegate.Model-SwiftUITests";
