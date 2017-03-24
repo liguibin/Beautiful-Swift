@@ -20,16 +20,17 @@ class ModelAPIViewControl: UIViewController {
     
     var data = NSArray()
     
-    public func reload() {
+    open func reload() {
         sendData()
     }
     
-    public func getRequestModel() -> RequestModel? {
+    open func getRequestModel() -> RequestModel? {
         return RequestModel(urlPath: "")
     }
     
     func sendData() {
         let requestModel : RequestModel = getRequestModel()!
+                
         AlamofireClient.default.send(requestModel) { (response, error) in
             
         }

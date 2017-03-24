@@ -4,7 +4,7 @@ target 'Model_Swift' do
 
 	pod 'Alamofire', '~> 4.4.0'
 	pod 'ObjectMapper', '~> 2.2.5'
-
+	pod 'Realm', '~> 2.4.4'
 end
 
 use_frameworks!

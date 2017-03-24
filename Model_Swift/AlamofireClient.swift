@@ -8,6 +8,14 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
+
+protocol Client {
+    
+    var host: String { get }
+    
+    func send<T: Request>(_ r: T, handler: @escaping (T.Response?, String?) -> Void);
+}
 
 public struct AlamofireClient: Client {
     
@@ -33,17 +41,17 @@ public struct AlamofireClient: Client {
                           encoding: URLEncoding.default,
                           headers: nil)
         
-        .response { (response) in
+        .responseJSON { (response) in
+            
+            if let res = T.Response.parse(json:response.value!) {
                 
-                if let data = response.data, let res = T.Response.parse(data: data) {
-                    
-                    handler(res, nil)
-                    
-                }else {
-                    
-                    handler(nil, response.error?.localizedDescription)
-                }
+                handler(res, nil)
+                
+            }else {
+                
+                handler(nil, response.error?.localizedDescription)
+            }
         }
     }
-    
 }
+

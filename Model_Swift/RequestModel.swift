@@ -28,5 +28,5 @@ struct RequestModel: Request {
         return nil
     }
     
-    typealias Response = RequestResult
+    typealias Response = TestResult
 }

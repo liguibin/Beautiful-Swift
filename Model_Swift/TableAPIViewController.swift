@@ -38,11 +38,11 @@ class TableAPIViewController : ModelAPIViewControl, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.getNumberRow(section: section)
+        return self.getNumberRow(section)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.getRowHeight(indexPath: indexPath)
+        return self.getRowHeight(indexPath)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,11 +60,11 @@ extension TableAPIViewController {
         return 0
     }
     
-    public func getNumberRow(section: Int) -> Int {
+    public func getNumberRow(_ section: Int) -> Int {
         return 0
     }
     
-    public func getRowHeight (indexPath: IndexPath) -> CGFloat {
+    public func getRowHeight (_ indexPath: IndexPath) -> CGFloat {
         return 0
     }
     
